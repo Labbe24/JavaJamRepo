@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - JavaJamMVC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+<div id="header">
+    <header>
+        <h1>JavaJam Coffee House</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Home/Index">Home</a></li>
+            <li><a asp-controller="Home" asp-action="Menu" id="menuLink">Menu</a></li>
+            <li><a asp-controller="Home" asp-action="Music" id="musicLink">Music</a></li>
+            <li><a asp-controller="Applicants" asp-action="Jobs" class="myClass">Jobs</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <main id="content" role="main" class="pb-3">
+            @RenderBody()
+        </main>
+        
+        <footer>
+            Copyright &copy; 2018 JavaJam Coffee House<br/>
+            <a href="mailto:JavaJam@nowhere.com">JavaJam@nowhere.com</a>
+        </footer>
+    </div>
+
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@RenderSection("Scripts", required: false)
+</body>
+</html>
